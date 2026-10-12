@@ -1,0 +1,361 @@
+:root {
+  --bg: #fbfcfc;
+  --surface: #f0f4f3;
+  --line: #dce4e2;
+  --ink: #1e2b2f;
+  --muted: #566569;
+  --accent: #2f6f68;
+  --whats: #168f4a;
+  --whats-hover: #11773d;
+  --radius: 14px;
+
+  --font-title: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  margin-bottom: 28px;
+}
+
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Botão WhatsApp ---------- */
+.btn-whats {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--whats);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-whats:hover {
+  background: var(--whats-hover);
+}
+
+.btn-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  padding: 13px 20px;
+  box-shadow: 0 8px 24px rgba(22, 143, 74, 0.35);
+}
+
+/* ---------- Topo ---------- */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(16px, 4vw, 56px);
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card {
+  position: relative;
+  max-width: 540px;
+  padding: clamp(24px, 3.5vw, 40px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.hero-local {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+}
+
+.hero-desc {
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* ---------- Informações principais ---------- */
+.specs {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.specs dl {
+  margin: 0 auto;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.specs dl > div {
+  padding: 28px 20px;
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.specs dl > div:first-child {
+  border-left: none;
+}
+
+.specs dt {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.specs dd {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+}
+
+/* ---------- Seções ---------- */
+.section {
+  padding: clamp(48px, 8vw, 96px) clamp(16px, 4vw, 56px);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.section-alt {
+  max-width: none;
+  background: var(--surface);
+}
+
+.section-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.section-inner.narrow {
+  max-width: 680px;
+}
+
+.section-inner.narrow p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* ---------- Galeria ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 12px;
+}
+
+.gallery-item {
+  padding: 0;
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--surface);
+}
+
+.gallery-item:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Vídeo ---------- */
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius);
+  background: #dfe7e5;
+}
+
+/* ---------- Detalhes ---------- */
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+}
+
+/* ---------- Chamada final ---------- */
+.cta-final {
+  padding: clamp(56px, 9vw, 110px) 20px clamp(96px, 12vw, 130px);
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+
+.cta-final h2 {
+  margin-bottom: 0;
+}
+
+.cta-final p {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* ---------- Visualizador de foto ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(240, 244, 243, 0.96);
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-height: 90vh;
+  border-radius: var(--radius);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 860px) {
+  .specs dl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .specs dl > div:nth-child(3) {
+    border-left: none;
+  }
+
+  .specs dl > div:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    min-height: 82vh;
+    padding: 12px;
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+.local-texto {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.mapa {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius);
+  background: #dfe7e5;
+}
+
+.btn-mapa {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-mapa:hover {
+  background: var(--accent);
+  color: #fff;
+}
