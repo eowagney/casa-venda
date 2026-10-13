@@ -19,7 +19,7 @@ const CONFIG = {
   ],
 
   fotos: [
-    { src: '/assets/fachada.jpg', alt: 'Fachada da casa' },
+    { src: '/assets/frente.jpg', alt: 'Fachada da casa' },
     { src: '/assets/sala.jpg', alt: 'Sala de estar integrada' },
     { src: '/assets/cozinha.jpg', alt: 'Cozinha com ilha central' },
     { src: '/assets/master.jpg', alt: 'Suíte master' },
@@ -31,7 +31,7 @@ const CONFIG = {
   video: {
     tipo: 'arquivo',
     src: '/assets/tour.mp4',
-    poster: '/assets/fachada.jpg',
+    poster: '/assets/frente.jpg',
     // tipo: 'youtube', id: 'dQw4w9WgXcQ',
   },
 
