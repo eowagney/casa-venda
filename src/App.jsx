@@ -75,16 +75,24 @@ const whatsappUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(
 const mapaUrl = `https://www.google.com/maps?q=${CONFIG.mapa.lat},${CONFIG.mapa.lng}`
 const mapaEmbedUrl = `https://maps.google.com/maps?q=${CONFIG.mapa.lat},${CONFIG.mapa.lng}&z=16&output=embed`
 
-/* Envia o evento de clique no WhatsApp para o Google Analytics (GA4) */
-function trackWhatsapp(posicao) {
-  if (typeof window.gtag === 'function') {
+  /* Envia os cliques no WhatsApp para o Google Analytics e o Google Ads */
+  function trackWhatsapp(posicao) {
+    if (typeof window.gtag !== 'function') return
+
+    // Evento para relatórios (Google Analytics / GA4)
     window.gtag('event', 'click_whatsapp', {
-      posicao_botao: posicao, // topo, rodape, flutuante...
+      posicao_botao: posicao, // topo, rodape, flutuante
       link_url: whatsappUrl,
-      transport_type: 'beacon', // garante o envio mesmo ao abrir outra aba
+      transport_type: 'beacon',
+    })
+
+    // Conversão "Contato Whatsapp" (Google Ads)
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-18509361446/e2EcCL27yZsdEKbi-flE',
+      value: 1.0,
+      currency: 'BRL',
     })
   }
-}
 
 function WhatsappIcon() {
   return (
