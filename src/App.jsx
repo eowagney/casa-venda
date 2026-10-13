@@ -3,7 +3,7 @@ import './App.css'
 
 const CONFIG = {
   // Número com código do país + DDD, sem espaços ou símbolos
-  whatsapp: '5562999999999',
+  whatsapp: '5562991610097',
   mensagem: 'Olá! Vi o anúncio da casa e gostaria de agendar uma visita.',
 
   titulo: 'Casa moderna com luz natural em todos os ambientes',
@@ -12,9 +12,9 @@ const CONFIG = {
     'Projeto contemporâneo com pé-direito duplo, grandes painéis de vidro e integração total entre sala, cozinha e área gourmet. Pronta para morar.',
 
   specs: [
-    { valor: '4', rotulo: 'suítes' },
-    { valor: '320 m²', rotulo: 'área construída' },
-    { valor: '450 m²', rotulo: 'terreno' },
+    { valor: '3', rotulo: 'suítes' },
+    { valor: '172 m²', rotulo: 'área construída' },
+    { valor: '250 m²', rotulo: 'terreno' },
     { valor: '4', rotulo: 'vagas' },
   ],
 
@@ -22,9 +22,9 @@ const CONFIG = {
     { src: '/assets/fachada.jpg', alt: 'Fachada da casa' },
     { src: '/assets/sala.jpg', alt: 'Sala de estar integrada' },
     { src: '/assets/cozinha.jpg', alt: 'Cozinha com ilha central' },
-    { src: '/assets/suite.jpg', alt: 'Suíte master' },
-    { src: '/assets/piscina.jpg', alt: 'Piscina e área gourmet' },
-    { src: '/assets/jardim.jpg', alt: 'Jardim' },
+    { src: '/assets/master.jpg', alt: 'Suíte master' },
+    { src: '/assets/suite.jpg', alt: 'Baneheiro da Suíte' },
+    { src: '/assets/ara_gourmet.jpg', alt: 'Área Gourmet' },
   ],
 
   // tipo: 'arquivo' (mp4 em public/videos) ou 'youtube' (informe só o ID do vídeo)
@@ -41,27 +41,23 @@ const CONFIG = {
       itens: [
         'Sala de estar e jantar integradas',
         'Cozinha com ilha e bancada em pedra',
-        'Suíte master com closet',
-        'Escritório com vista para o jardim',
+        'Suíte master',
         'Piso porcelanato e esquadrias de alumínio',
       ],
     },
     {
       titulo: 'Área externa',
       itens: [
-        'Piscina com deck',
         'Área gourmet com churrasqueira',
-        'Jardim paisagístico',
-        'Garagem coberta para 4 carros',
+        'Garagem coberta para 1 carro',
       ],
     },
     {
       titulo: 'Conforto e tecnologia',
       itens: [
-        'Energia solar',
-        'Ar-condicionado nos quartos',
-        'Automação de iluminação',
-        'Portão eletrônico e câmeras',
+        'Estrutura pronta para aquecimento solar',
+        'Sistema de iluminação sofisticado',
+        'Portão eletrônico',
       ],
     },
   ],
