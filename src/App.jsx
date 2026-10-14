@@ -146,6 +146,20 @@ function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [fotoAberta])
 
+  // Garante que links com #secao parem no lugar certo depois do carregamento
+  useEffect(() => {
+    const irParaSecao = () => {
+      const id = window.location.hash.slice(1)
+      if (id) document.getElementById(id)?.scrollIntoView()
+    }
+    if (document.readyState === 'complete') {
+      irParaSecao()
+    } else {
+      window.addEventListener('load', irParaSecao)
+      return () => window.removeEventListener('load', irParaSecao)
+    }
+  }, [])
+
   return (
     <>
       {/* Topo */}
@@ -160,7 +174,7 @@ function App() {
       </header>
 
       {/* Informações principais */}
-      <section className="specs" aria-label="Informações principais">
+      <section className="specs" id="informacoes" aria-label="Informações principais">
         <dl>
           {CONFIG.specs.map((s) => (
             <div key={s.rotulo}>
@@ -198,7 +212,7 @@ function App() {
       </section>
 
       {/* Detalhes */}
-      <section className="section" id="detalhes">
+      <section className="section section-detalhes" id="detalhes">
         <h2>Detalhes da casa</h2>
         <div className="details">
           {CONFIG.detalhes.map((grupo) => (
@@ -241,7 +255,7 @@ function App() {
     </section>
 
       {/* Chamada final */}
-      <section className="cta-final">
+      <section className="cta-final" id="contato">
         <h2>Quer conhecer pessoalmente?</h2>
         <p>Chame no WhatsApp e escolha o melhor dia e horário para a visita.</p>
         <WhatsappButton posicao="rodape">Falar no WhatsApp</WhatsappButton>

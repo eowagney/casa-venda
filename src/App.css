@@ -153,6 +153,15 @@ p {
   font-weight: 700;
 }
 
+/* ---------- Rolagem suave para os links de seção ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 16px;
+}
+
 /* ---------- Seções ---------- */
 .section {
   padding: clamp(48px, 8vw, 96px) clamp(16px, 4vw, 56px);
@@ -219,8 +228,10 @@ p {
 /* ---------- Detalhes ---------- */
 .details {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 40px;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .details h3 {
@@ -235,8 +246,9 @@ p {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 16px;
   color: var(--muted);
+  font-size: 1.05rem;
 }
 
 /* ---------- Chamada final ---------- */
@@ -311,7 +323,6 @@ p {
   }
 
   .details {
-    grid-template-columns: 1fr;
     gap: 32px;
   }
 }
@@ -358,4 +369,8 @@ p {
 .btn-mapa:hover {
   background: var(--accent);
   color: #fff;
+}
+/* Título da seção de detalhes centralizado */
+.section-detalhes h2 {
+  text-align: center;
 }
