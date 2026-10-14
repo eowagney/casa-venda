@@ -4,12 +4,12 @@ import './App.css'
 const CONFIG = {
   // Número com código do país + DDD, sem espaços ou símbolos
   whatsapp: '5562991610097',
-  mensagem: 'Olá! Vi o anúncio da casa e gostaria de agendar uma visita.',
+  mensagem: 'Olá! Vi o anúncio da casa e gostaria de mais informações. Podemos agendar uma visita?',
 
   titulo: 'Casa moderna com luz natural em todos os ambientes',
   local: 'Morada do Morro, Senador Canedo – GO',
   descricao:
-    'Projeto contemporâneo com pé-direito duplo, grandes painéis de vidro e integração total entre sala, cozinha e área gourmet. Pronta para morar.',
+    '✨ Uma casa que combina conforto, funcionalidade e ambientes planejados, com uma área gourmet ideal para confraternizar e aproveitar bons momentos sem sair de casa.',
 
   specs: [
     { valor: '3', rotulo: 'suítes' },
@@ -20,11 +20,16 @@ const CONFIG = {
 
   fotos: [
     { src: '/assets/frente.jpg', alt: 'Fachada da casa' },
+    { src: '/assets/fachada.jpg', alt: 'Fachada da casa' },
     { src: '/assets/sala.jpg', alt: 'Sala de estar integrada' },
     { src: '/assets/cozinha.jpg', alt: 'Cozinha com ilha central' },
     { src: '/assets/master.jpg', alt: 'Suíte master' },
     { src: '/assets/suite.jpg', alt: 'Baneheiro da Suíte' },
-    { src: '/assets/ara_gourmet.jpg', alt: 'Área Gourmet' },
+    { src: '/assets/quarto1.jpg', alt: 'Quarto 1' },
+    { src: '/assets/banheiro_americano.jpg', alt: 'Banheiro americano' },
+    { src: '/assets/quarto2.jpg', alt: 'Quarto 2' },
+    { src: '/assets/area_gourmet.jpg', alt: 'Área Gourmet' },
+    { src: '/assets/banheiro_social.jpg', alt: 'Banheiro social' },
   ],
 
   // tipo: 'arquivo' (mp4 em public/videos) ou 'youtube' (informe só o ID do vídeo)
@@ -37,27 +42,15 @@ const CONFIG = {
 
   detalhes: [
     {
-      titulo: 'Interior',
+      titulo: 'Destaques do imóvel',
       itens: [
-        'Sala de estar e jantar integradas',
-        'Cozinha com ilha e bancada em pedra',
-        'Suíte master',
-        'Piso porcelanato e esquadrias de alumínio',
-      ],
-    },
-    {
-      titulo: 'Área externa',
-      itens: [
-        'Área gourmet com churrasqueira',
-        'Garagem coberta para 1 carro',
-      ],
-    },
-    {
-      titulo: 'Conforto e tecnologia',
-      itens: [
-        'Estrutura pronta para aquecimento solar',
-        'Sistema de iluminação sofisticado',
-        'Portão eletrônico',
+        '🚗 Garagem coberta com espaço para 1 carro, além de área frontal com capacidade para estacionar mais 3 veículos.',
+        '🍖 Varanda gourmet com churrasqueira, cozinha e armários planejados, perfeita para reunir família e amigos e aproveitar momentos especiais.',
+        '🍽️ Cozinha interna totalmente planejada, com armários que aliam funcionalidade e organização.',
+        '🛋️ Sala com pé-direito alto, proporcionando amplitude e sofisticação, além de painel planejado',
+        '🛏️ 3 quartos, sendo 1 suíte, oferecendo conforto e privacidade para toda a família.',
+        '🚿 3 banheiros no total, garantindo mais praticidade no dia a dia.',
+        '☀️ Infraestrutura para aquecimento solar já instalada, com 4 pontos de saída: 3 para os banheiros e 1 para a cozinha. Falta somente a instalação das placas solares para completar o sistema.',
       ],
     },
   ],
