@@ -61,6 +61,15 @@ const CONFIG = {
   mapa: { lat: -16.687417, lng: -49.114667 },
   }
 
+const MENU = [
+  { id: 'informacoes', rotulo: 'Informações' },
+  { id: 'fotos', rotulo: 'Fotos' },
+  { id: 'video', rotulo: 'Vídeo' },
+  { id: 'detalhes', rotulo: 'Detalhes' },
+  { id: 'localizacao', rotulo: 'Localização' },
+  { id: 'contato', rotulo: 'Contato' },
+]
+
 const whatsappUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(
   CONFIG.mensagem,
 )}`
@@ -162,6 +171,27 @@ function App() {
 
   return (
     <>
+      {/* Menu */}
+      <nav className="menu" aria-label="Navegação do site">
+        <ul>
+          {MENU.map((item) => (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                onClick={() =>
+                  window.gtag?.('event', 'click_menu', {
+                    secao: item.id,
+                    transport_type: 'beacon',
+                  })
+                }
+              >
+                {item.rotulo}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
       {/* Topo */}
       <header className="hero">
         <img className="hero-img" src={CONFIG.fotos[0].src} alt={CONFIG.fotos[0].alt} />
