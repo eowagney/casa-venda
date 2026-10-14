@@ -28,7 +28,7 @@ const CONFIG = {
     { src: '/assets/quarto1.jpg', alt: 'Quarto 1' },
     { src: '/assets/banheiro_americano.jpg', alt: 'Banheiro americano' },
     { src: '/assets/quarto2.jpg', alt: 'Quarto 2' },
-    { src: '/assets/area_gourmet.jpg', alt: 'Área Gourmet' },
+    { src: '/assets/ara_gourmet.jpg', alt: 'Área Gourmet' },
     { src: '/assets/banheiro_social.jpg', alt: 'Banheiro social' },
   ],
 
